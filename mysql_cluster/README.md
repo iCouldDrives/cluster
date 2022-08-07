@@ -38,9 +38,9 @@
 	
 	vim ./ms/master_slave.sql
 
-### 修改master_host为自己的IP地址，master_log_file和master_log_pos为之前查询到的file和position的值
+	修改master_host为自己的IP地址，master_log_file和master_log_pos为之前查询到的file和position的值
 
-### 保存退出
+	保存退出
 	
 	esc按键  :(英文冒号)wq  回车
 
