@@ -21,6 +21,27 @@ services:
 		command: redis_server /etc/redis/conf/redis.conf
 		# 使用桥接网络
 		network_mode: "bridge"
+	redis_slave01:
+		# 镜像
+		image: redis:latest
+		# 容器名
+		container_name: redis_salve01
+		# 映射目录
+		volumes:
+			- ./conf.d/slave01/conf:/etc/redis/conf
+		# 端口映射
+		ports:
+			- "6381:6379"
+		# 重启策略
+		restart: always
+		# 使用root权限
+		privileged: true
+		# 环境变量
+		# environment:
+		# 命令
+		command: redis_server /etc/redis/conf/redis.conf
+		# 使用桥接网络
+		network_mode: "bridge"
 	redis_slave02:
 		# 镜像
 		image: redis:latest
